@@ -16,7 +16,7 @@ const UserSearchDialog = ({ open, setOpen }) => {
 
     setLoading(true);
     try {
-      const res = await axios.get(`http://localhost:3000/api/v1/user/search`, {
+      const res = await axios.get(`https://dealy-deploy.onrender.com/api/v1/user/search`, {
         params: { query: searchTerm }, 
         withCredentials: true, 
     });

@@ -52,7 +52,7 @@ const Profile = () => {
       
     
       const response = await axios.post(
-        `http://localhost:3000/api/v1/user/followorunfollow/${userId}`,
+        `https://dealy-deploy.onrender.com/api/v1/user/followorunfollow/${userId}`,
         {},
         {
           withCredentials: true,

@@ -17,7 +17,7 @@ const navigate = useNavigate();
         setLoading(true);
 
         try {
-            const res = await axios.post('http://localhost:3000/api/v1/user/verify-email', { code });
+            const res = await axios.post('https://dealy-deploy.onrender.com/api/v1/user/verify-email', { code });
             if (res.data.success) {
                 toast.success(res.data.message);
                 navigate("/login");

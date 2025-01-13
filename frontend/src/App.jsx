@@ -82,7 +82,7 @@ export default function App() {
 
   useEffect(() => {
     if (user) {
-      const socketio = io('http://localhost:3000', {
+      const socketio = io('https://dealy-deploy.onrender.com', {
         query: {
           userId: user?._id
         },
