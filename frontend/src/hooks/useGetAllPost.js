@@ -13,7 +13,7 @@ const useGetAllPost = () => {
         const fetchAllPost = async () => {
             try {
                 
-                const res = await axios.get('https://dealy-deploy.onrender.com/api/v1/post/all', { withCredentials: true });
+                const res = await axios.get('https://www.dealyshop.me/api/v1/post/all', { withCredentials: true });
                 
                 if (res.data.success) { 
                     

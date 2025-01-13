@@ -35,7 +35,7 @@ const Signup = () => {
       try {
           setLoading(true);
 
-          const res = await axios.post('https://dealy-deploy.onrender.com/api/v1/user/register', input, {
+          const res = await axios.post('https://www.dealyshop.me/api/v1/user/register', input, {
               headers: {
                   'Content-Type': 'application/json'
               },
