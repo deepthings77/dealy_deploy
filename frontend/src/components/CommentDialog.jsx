@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import Comment from './Comment'
 import axios from 'axios'
 import { toast } from 'sonner'
-import { setPosts } from '@/redux/postSlice'
+import { setPosts } from '../Redux/postSlice'
 
 import exampleImage from '../assets/logofordealy.png';
 

@@ -3,14 +3,14 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog'
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import { Textarea } from './ui/textarea';
 import { Button } from './ui/button';
-import { readFileAsDataURL } from '@/lib/utils';
+import { readFileAsDataURL } from '../lib/utils';
 import { Loader2 } from 'lucide-react';
 import { toast , Toaster} from 'sonner';
 
 
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
-import { setPosts } from '@/redux/postSlice';
+import { setPosts } from '../Redux/postSlice';
 
 
 const CreatePost = ({ open, setOpen }) => {

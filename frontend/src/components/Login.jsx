@@ -6,7 +6,7 @@ import { toast } from 'sonner';
 import { Link, useNavigate } from 'react-router-dom';
 import { Loader2 } from 'lucide-react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setAuthUser } from '@/redux/authSlice';
+import { setAuthUser } from '../Redux/authSlice';
 import exampleImage from '../assets/logo.png';
 
 

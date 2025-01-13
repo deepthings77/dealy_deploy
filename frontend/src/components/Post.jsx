@@ -8,7 +8,7 @@ import CommentDialog from './CommentDialog'
 import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
 import { toast } from 'sonner'
-import { setPosts, setSelectedPost } from '@/redux/postSlice'
+import { setPosts, setSelectedPost } from '../Redux/postSlice'
 import { Badge } from './ui/badge'
 import {Link} from 'react-router-dom';
 import exampleImage from '../assets/logofordealy.png';
