@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { useSelector } from "react-redux";
 import TinderCardComponent from "./TinderCard";
 import { Outlet } from "react-router-dom";
@@ -7,6 +7,8 @@ import FeedForExplore from "./FeedForExplore";
 
 const ExplorePage = () => {
   
+ 
+
 
   return (
     <div className='flex '>

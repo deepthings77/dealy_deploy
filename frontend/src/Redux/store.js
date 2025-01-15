@@ -13,6 +13,7 @@ import {
 import socketSlice from "./socketSlice.js"
 import rtnSlice from "./rtnSlice.js";
 
+
 import storage from 'redux-persist/lib/storage'
 
 
@@ -27,7 +28,8 @@ const rootReducer = combineReducers({
     auth: authSlice,
     post: postSlice,
     socketio:socketSlice,
-    realTimeNotification:rtnSlice
+    realTimeNotification:rtnSlice,
+    
 });
 
 

@@ -66,8 +66,14 @@ export const addNewPost = async (req, res) => {
 
 export const getAllPost  = async (req, res) => {
     try {
+        const page = parseInt(req.query.page) || 1; // Default to page 1
+        const limit = parseInt(req.query.limit) || 10; // Default to 10 posts per page
+        const skip = (page - 1) * limit;
+    
 
         const posts = await Post.find().sort({ createdAt: -1 })
+                        .skip(skip)
+                        .limit(limit)
                         .populate({ path: 'author', select: 'username profilePicture' })
                         .populate({
                             path: 'comments',
@@ -78,10 +84,13 @@ export const getAllPost  = async (req, res) => {
                             }
                         })
                      
+                          // Fetch total post count to calculate whether there are more posts
+    const totalPosts = await Post.countDocuments();
 
                         return res.status(200).json({
                             posts,
-                            success: true
+                            success: true,
+                            hasMore: skip + posts.length < totalPosts
                         })
         
     } catch (error) {
@@ -89,6 +98,33 @@ export const getAllPost  = async (req, res) => {
         
     }
 };
+
+
+// export const getAllPost  = async (req, res) => {
+//     try {
+
+//         const posts = await Post.find().sort({ createdAt: -1 })
+//                         .populate({ path: 'author', select: 'username profilePicture' })
+//                         .populate({
+//                             path: 'comments',
+//                             sort: { createdAt: -1 },
+//                             populate: {
+//                                 path: 'author',
+//                                 select: 'username profilePicture'
+//                             }
+//                         })
+                     
+
+//                         return res.status(200).json({
+//                             posts,
+//                             success: true
+//                         })
+        
+//     } catch (error) {
+//         console.log("Error in getAllPost ", error);
+        
+//     }
+// };
 
 export const getSinglePost = async (req, res) => {
     try {
