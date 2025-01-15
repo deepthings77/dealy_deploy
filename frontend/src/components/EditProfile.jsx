@@ -17,8 +17,8 @@ const EditProfile = () => {
   const [loading, setLoading] = useState(false);
   const [input, setInput] = useState({
       profilePhoto: user?.profilePicture,
-      bio: user?.bio,
-      gender: user?.gender
+      bio: user?.bio || '',
+      gender: user?.gender || ''
   });
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -39,13 +39,30 @@ const EditProfile = () => {
   }
 
   const editProfileHandler = async (e) => {
-
+      
         const formData = new FormData();
-        formData.append("bio", input.bio);
-        formData.append("gender", input.gender);
+        let isUpdated = false;
+
+        if (input.bio !== user?.bio) {
+          formData.append('bio', input.bio);
+          isUpdated = true;
+        }
+    
+        if (input.gender !== user?.gender) {
+          formData.append('gender', input.gender);
+          isUpdated = true;
+        }
+        
         if(input.profilePhoto){
             formData.append("profilePhoto", input.profilePhoto);
+            isUpdated = true;
+
         }
+        if (!isUpdated) {
+          toast.error('No changes detected');
+          return;
+        }
+    
 
     try {
 
