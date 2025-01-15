@@ -13,7 +13,7 @@ import { use } from 'react'
 
 const Home = () => {
   
-  // useGetSuggestedUsers();
+  useGetSuggestedUsers();
   // useGetAllPost();
   
   const location = useLocation();
