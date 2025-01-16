@@ -19,7 +19,7 @@ import { setSocket } from './Redux/socketSlice'
 import { setLikeNotification } from './Redux/rtnSlice'
 import { setOnlineUsers } from './Redux/chatSlice'
 import Description from './components/Description'
-
+import NotFound from './components/NotFound'
 import VerifyEmailScreen from './components/EmailVerify'
 
 
@@ -70,6 +70,10 @@ const browserRouter = createBrowserRouter([
     path: '/des',
     element: <Description />
   },
+  {
+    path: '*',
+  element: <NotFound />
+  }
 ])
 
 

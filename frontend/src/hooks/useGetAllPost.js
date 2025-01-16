@@ -45,6 +45,7 @@ const useGetAllPost = () => {
   };
 
   const resetToFirstPage = () => {
+    dispatch(clearPosts());
     setPage(1); 
     
   };

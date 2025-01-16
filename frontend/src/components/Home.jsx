@@ -8,8 +8,6 @@ import useGetSuggestedUsers from '../hooks/useGetSuggestedUsers'
 
 import useGetAllPost from '../hooks/useGetAllPost';
 import { useDispatch } from 'react-redux';
-import { clearPosts } from '../Redux/postSlice';
-import { use } from 'react'
 
 const Home = () => {
   
@@ -27,12 +25,21 @@ const Home = () => {
     
     
     window.scrollTo({
+      top:location,
+      behavior: 'smooth',
+    });
+
+    resetToFirstPage();
+   
+  }, []);
+  useEffect(() => {
+    
+    
+    window.scrollTo({
       top: 0,
       behavior: 'smooth', 
     });
-    resetToFirstPage();
-    
-    
+   
   }, [location]);
 
   return (

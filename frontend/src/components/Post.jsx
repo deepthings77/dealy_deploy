@@ -378,7 +378,7 @@ const Post = ({ post }) => {
                     className='outline-none text-sm w-full border-gray-600    p-2 rounded'
                 />
                 {
-                    text && <span onClick={commentHandler} className='m-1 text-black cursor-pointer'>Post</span>
+                    text && <span onClick={commentHandler} className='m-1 text-white cursor-pointer'>Post</span>
                 }
 
         </div>
