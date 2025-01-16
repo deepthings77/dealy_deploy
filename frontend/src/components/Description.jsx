@@ -11,7 +11,7 @@ const Description = () => {
   return (
    <>
     <div style={{
-      background: "linear-gradient(to bottom , #DF5D4A, #d40054)"            
+      background: "#131423"            
      }} >
      <Navbar />
       <div className="max-w-7xl mx-auto pt-20 px-6">

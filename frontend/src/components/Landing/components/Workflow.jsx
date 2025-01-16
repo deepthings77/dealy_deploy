@@ -5,7 +5,7 @@ import { checklistItems } from "../constants";
 const Workflow = () => {
   return (
     <div className="mt-20">
-      <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center mt-6 tracking-wide">
+      <h2 className="text-3xl text-custom-hover sm:text-5xl lg:text-6xl text-center mt-6 tracking-wide">
       Empowering creator to grow, collaborate and earn.
         
       </h2>
@@ -20,7 +20,7 @@ const Workflow = () => {
                 <CheckCircle2 />
               </div>
               <div>
-                <h5 className="mt-1 mb-2 text-xl">{item.title}</h5>
+                <h5 className="mt-1 mb-2 text-xl text-custom-hover">{item.title}</h5>
                 <p className="text-md text-white">{item.description}</p>
               </div>
             </div>

@@ -83,7 +83,7 @@ const Profile = () => {
   return (
     <div
       style={{
-        background: "linear-gradient(to bottom, #DF5D4A, #d40054)",
+        background: "#131423",
         minHeight: "100vh",
         marginLeft: "16%",
         display: "flex", 
@@ -119,7 +119,7 @@ const Profile = () => {
                     <Link to="/account/edit">
                       <Button
                         variant="secondary"
-                        className="bg-white text-gray-800 shadow-md hover:bg-gray-200 h-8 px-4 text-sm"
+                        className="bg-custom-hover text-white shadow-md hover:bg-gray-200 h-8 px-4 text-sm"
                       >
                         Edit Profile
                       </Button>

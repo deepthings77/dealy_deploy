@@ -18,7 +18,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        'custom-hover': '#de5949',
+        'custom-hover': '#D40054',
       },
       keyframes: {
         "accordion-down": {

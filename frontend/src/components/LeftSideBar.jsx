@@ -80,10 +80,10 @@ const LeftSideBar = () => {
         <div
           style={{
 
-             background: "linear-gradient(to bottom, #DF5D4A, #d40054)"
+             background: "#131423"
             
           }}
-          className={`fixed top-0 z-10 left-0 h-screen ${isSidebarOpen ? 'w-[70%]' : 'w-[36%]'} sm:w-[25%] md:w-[20%] lg:w-[16%] transition-all shadow-lg`}
+          className={`fixed top-0 z-10 left-0 h-screen ${isSidebarOpen ? 'w-[70%]' : 'w-[36%]'} sm:w-[25%] md:w-[20%] lg:w-[16%] transition-all shadow-lg border-r border-gray-200`}
         >
           <div className="flex flex-col h-full justify-between">
             {/* Logo Section */}

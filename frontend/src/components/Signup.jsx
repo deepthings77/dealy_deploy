@@ -69,14 +69,14 @@ const Signup = () => {
   return (
     <div style={{
 
-        background: "#DF514E"
+        background: "#131423"
        
      }} className="flex items-center justify-center w-full h-screen px-4 sm:px-6 lg:px-8">
         <form
             onSubmit={signupHandler}
             style={{
 
-                background: "linear-gradient(to bottom, #DF5D4A, #d40054)"
+                background: "#D40054 "
                
              }}
             className="w-full max-w-md p-6 space-y-6 bg-white shadow-lg rounded-lg"
@@ -148,6 +148,12 @@ const Signup = () => {
                 <Link to="/login" className="text-blue-600">
                     Login
                 </Link>
+            </p>
+            <p className="text-center text-sm">
+            Haven't verified your email yet?{' '}
+              <Link to="/verify-email" className="text-blue-600">
+               Go to Email Verification
+              </Link>
             </p>
         </form>
     </div>

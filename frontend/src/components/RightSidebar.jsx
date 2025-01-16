@@ -10,7 +10,7 @@ const RightSidebar = () => {
   return (
     <div
       style={{
-          background: "linear-gradient(to bottom, #DF5D4A, #d40054)"
+          background: "#131423"
       }}
       className="fixed top-0 z-0 right-0 px-6 py-4 border-l border-gray-200 w-[23%] h-screen shadow-lg"
     >

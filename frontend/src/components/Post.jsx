@@ -205,7 +205,7 @@ const Post = ({ post }) => {
 
   return (
     <div style={{
-      background: "linear-gradient(to bottom , #DF5D4A, #d40054)"            
+      background: "#D40054  "            
      }} className='my-8 w-full max-w-lg mx-auto border border-gray-300 rounded-lg shadow-md p-6 bg-white '>
         <div className='flex items-center justify-between'>
 

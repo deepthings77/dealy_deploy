@@ -8,7 +8,7 @@ const Feed = () => {
 
   return (
     <div style={{
-       background: "#DF514E"
+       background: "#131423"
     }} className="flex-1 my-0 flex flex-col items-center px-4 sm:px-10 md:px-20 lg:px-32">       
         <Posts />       
     </div>

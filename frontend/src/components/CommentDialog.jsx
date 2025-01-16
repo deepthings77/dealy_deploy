@@ -74,7 +74,7 @@ const CommentDialog = ({ open, setOpen }) => {
     return (
       <Dialog open={open}>
         <DialogContent  onInteractOutside={() => setOpen(false)} style={{
-            background: "linear-gradient(to bottom, #DF5D4A, #d40054)"   
+            background: "#131423"   
             
           }} className="max-w-5xl p-0 flex flex-col h-[90vh]">
             <DialogTitle className="text-center font-small text-white p-1">Comments</DialogTitle>

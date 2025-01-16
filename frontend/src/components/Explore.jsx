@@ -1,13 +1,23 @@
 import React,{useEffect} from "react";
-import { useSelector } from "react-redux";
-import TinderCardComponent from "./TinderCard";
-import { Outlet } from "react-router-dom";
+import { Outlet ,useLocation} from "react-router-dom";
 import Feed from "./Feed";
 import FeedForExplore from "./FeedForExplore";
 
 const ExplorePage = () => {
   
- 
+ const location = useLocation();
+   useEffect(() => {
+     
+     
+     
+     window.scrollTo({
+       top: 0,
+       behavior: 'smooth', 
+     });
+    
+     
+     
+   }, [location]);
 
 
   return (

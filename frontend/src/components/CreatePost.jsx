@@ -115,7 +115,7 @@ const CreatePost = ({ open, setOpen }) => {
 
         <Dialog open={open}>
             <DialogContent onInteractOutside={() => setOpen(false) }style={{
-            background: "linear-gradient(to bottom, #DF5D4A, #d40054)"   
+            background: "#131423",   
             
           }} className="overflow-y-auto max-h-screen p-4" >
                 <DialogTitle className='text-center font-bold text-white p-1'>Create New Collection</DialogTitle>
@@ -128,7 +128,7 @@ const CreatePost = ({ open, setOpen }) => {
                         <AvatarFallback>CN</AvatarFallback>
                     </Avatar>
                     <div>
-                        <h1 className='font-semibold text-xs'>{user?.username}</h1>
+                        <h1 className='font-semibold text-xs text-white'>{user?.username}</h1>
                         
                     </div>
                 </div>
@@ -150,7 +150,7 @@ const CreatePost = ({ open, setOpen }) => {
 
                 {/* Dynamic Input Fields for Product URLs */}
                 <div className="space-y-2 mt-4">
-                    <h3 className="text-sm font-semibold">Product URLs</h3>
+                    <h3 className="text-sm font-semibold text-white">Product URLs</h3>
                     {productUrls.map((url, index) => (
                         <div key={index} className="flex items-center gap-2">
                             <input

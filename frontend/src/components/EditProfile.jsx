@@ -47,7 +47,7 @@ const EditProfile = () => {
           formData.append('bio', input.bio);
           isUpdated = true;
         }
-    
+        
         if (input.gender !== user?.gender) {
           formData.append('gender', input.gender);
           isUpdated = true;
@@ -99,7 +99,7 @@ const EditProfile = () => {
   return (
     <div
       style={{
-        background: 'linear-gradient(to bottom, #DF5D4A, #d40054)',
+        background: '#131423',
       }}
       className="min-h-screen flex items-center justify-center"
     >

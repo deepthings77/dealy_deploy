@@ -38,7 +38,7 @@ const UserSearchDialog = ({ open, setOpen }) => {
     <Dialog open={open}>
       <DialogContent
         onInteractOutside={() => setOpen(false)} style={{
-          background: "linear-gradient(to bottom, #DF5D4A, #d40054)"   
+          background: "#131423"   
           
         }}
         className="overflow-y-auto max-h-screen p-4"
@@ -59,7 +59,7 @@ const UserSearchDialog = ({ open, setOpen }) => {
           <Button
             onClick={handleSearch}
             disabled={loading}
-            className="bg-blue-500 hover:bg-blue-600"
+            className="bg-custom-hover hover:bg-blue-600"
           >
             {loading ? "Searching..." : "Search"}
           </Button>

@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const HeroSection = () => {
   return (
     <div className="flex flex-col items-center mt-6 lg:mt-20">
-      <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center flex tracking-wide">
+      <h1 className="text-4xl text-custom-hover sm:text-6xl lg:text-7xl text-center flex tracking-wide">
       Welcome to
          <div className="flex items-center justify-center">
          <img className="h-20 w-26 mr-2" src={logo} alt="Logo" />
@@ -20,7 +20,7 @@ const HeroSection = () => {
       <div className="flex justify-center my-10">
       <Link
     to="/signup"
-    className="bg-gradient-to-r from-orange-500 to-orange-800 py-3 px-4 mx-3 rounded-md"
+    className="bg-custom-hover py-3 px-4 mx-3 rounded-md"
   >
     Start for free
   </Link>
