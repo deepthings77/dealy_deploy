@@ -44,15 +44,15 @@ const Navbar = () => {
           </div>
         </div>
         {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
+          <div className="fixed right-0 z-20 bg-#131423 w-full p-12 flex flex-col justify-center items-center lg:hidden">
             
             <div className="flex space-x-6">
-            <Link to="/login" className="py-2 px-3 border rounded-md">
-    Sign In
+            <Link to="/login" className="py-2 px-3 border rounded-md text-white">
+    Log In
   </Link>
   <Link
     to="/signup"
-    className="py-2 px-3 rounded-md bg-gradient-to-r from-orange-500 to-orange-800"
+    className="py-2 px-3 rounded-md bg-custom-hover"
   >
     Create an account
   </Link>

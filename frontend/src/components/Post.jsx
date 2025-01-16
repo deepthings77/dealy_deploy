@@ -205,7 +205,7 @@ const Post = ({ post }) => {
 
   return (
     <div style={{
-      background: "#D40054  "            
+      background: "#131423  "            
      }} className='my-8 w-full max-w-lg mx-auto border border-gray-300 rounded-lg shadow-md p-6 bg-white '>
         <div className='flex items-center justify-between'>
 
@@ -230,7 +230,7 @@ const Post = ({ post }) => {
             </div>
 
             <Dialog>
-                    <DialogTrigger asChild>
+                    <DialogTrigger className='text-white' asChild>
                         <MoreHorizontal className='cursor-pointer' />
                     </DialogTrigger>
                     <DialogContent className="flex flex-col items-center text-sm text-center">
@@ -251,7 +251,7 @@ const Post = ({ post }) => {
                             value={`${window.location.origin}/posts/${post?._id}`}
                             className="border rounded px-2 py-1 flex-1"
                           />
-                          <button onClick={handleCopy} className="bg-blue-500 text-white px-4 py-1 rounded">
+                          <button onClick={handleCopy} className="bg-custom-hover text-white px-4 py-1 rounded">
   {copied ? "Copied!" : "Copy URL"}
 </button>
                         </div>
@@ -303,18 +303,18 @@ const Post = ({ post }) => {
             <div className='flex items-center gap-3'>
 
                 {
-                  liked ? <FaHeart onClick={likeOrDislikeHandler} size={'24'} className='cursor-pointer text-white' /> 
-                  : <FaRegHeart onClick={likeOrDislikeHandler} size={'22px'} className='cursor-pointer hover:text-white' />
+                  liked ? <FaHeart onClick={likeOrDislikeHandler} size={'24'} className='cursor-pointer text-custom-hover' /> 
+                  : <FaRegHeart onClick={likeOrDislikeHandler} size={'22px'} className='cursor-pointer text-white hover:text-custom-hover' />
                 }
 
                 <MessageCircle onClick={() => {
                         dispatch(setSelectedPost(post));
                         setOpen(true);
-                    }} className='cursor-pointer  hover:text-white' />
+                    }} className='cursor-pointer text-white  hover:text-custom-hover' />
                 
 
                 <Send
-                  className="cursor-pointer  hover:text-white"
+                  className="cursor-pointer text-white hover:text-custom-hover"
                   onClick={() => {
                     handleShare();
                   }}
@@ -324,8 +324,8 @@ const Post = ({ post }) => {
 )}
            </div>
             {
-                  bookmarked  ? <Bookmark onClick={bookmarkHandler} size={'24'} className='cursor-pointer text-white' /> 
-                  : <Bookmark onClick={bookmarkHandler} size={'22px'} className='cursor-pointer hover:text-white' />
+                  bookmarked  ? <Bookmark onClick={bookmarkHandler} size={'24'} className='cursor-pointer text-custom-hover' /> 
+                  : <Bookmark onClick={bookmarkHandler} size={'22px'} className='cursor-pointer text-white hover:text-custom-hover' />
             }
 
 
@@ -351,7 +351,7 @@ const Post = ({ post }) => {
         {/* Show More / Show Less Button */}
         <span
           onClick={toggleTextHandler}
-          className="text-black-500 cursor-pointer"
+          className="text-gray-500 cursor-pointer"
         >
           {showFullText ? 'Show less' : 'Show more'}
         </span>

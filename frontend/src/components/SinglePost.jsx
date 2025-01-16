@@ -22,10 +22,18 @@ const SinglePost = () => {
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
   const [showFullText, setShowFullText] = useState(false);
-
+  const [copied, setCopied] = useState(false);
   const toggleTextHandler = () => {
     setShowFullText((prev) => !prev);
   };
+
+    
+  const handleCopy = () => {
+    navigator.clipboard.writeText(`${window.location.origin}/posts/${post?._id}`);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
+  };
+
 
 
   useEffect(() => {
@@ -55,7 +63,7 @@ const SinglePost = () => {
   return (
     post && (
       <div style={{
-         background: "linear-gradient(to bottom, #DF5D4A, #d40054)"
+         background: "#131423"
         
       }} className="my-8 w-full max-w-lg mx-auto border border-gray-300 rounded-lg bg-gray-50 shadow-md p-6">
         {/* Header Section */}
@@ -128,7 +136,7 @@ const SinglePost = () => {
           </span>
           <span
             onClick={toggleTextHandler}
-            className="text-black cursor-pointer"
+            className="text-gray-500 cursor-pointer"
           >
             {showFullText ? 'Show less' : 'Show more'}
           </span>
@@ -142,16 +150,9 @@ const SinglePost = () => {
             value={`${window.location.origin}/post/${postId}`}
             className="border rounded px-2 py-1 flex-1"
           />
-          <button
-            onClick={() =>
-              navigator.clipboard.writeText(
-                `${window.location.origin}/post/${postId}`
-              )
-            }
-            className="bg-blue-500 text-white px-4 py-1 rounded w-full sm:w-auto"
-          >
-            Copy URL
-          </button>
+          <button onClick={handleCopy} className="bg-custom-hover text-white px-4 py-1 rounded">
+  {copied ? "Copied!" : "Copy URL"}
+</button>
         </div>
       </div>
     )

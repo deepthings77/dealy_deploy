@@ -14,10 +14,10 @@ const SuggestedUsers = () => {
   }, [suggestedUsers]);
 
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md">
+    <div className="bg-#131423 p-4 rounded-lg shadow-md border border-gray-300">
     
       <div className="flex items-center justify-between mb-4">
-        <h1 className="font-semibold text-gray-800 text-lg">Suggested for you</h1>
+        <h1 className="font-semibold text-white text-lg">Suggested for you</h1>
         
       </div>
 
@@ -25,7 +25,7 @@ const SuggestedUsers = () => {
         {shuffledUsers.map((user) => (
           <div
             key={user._id}
-            className="flex items-center justify-between p-2 hover:bg-custom-hover rounded-lg transition duration-200"
+            className="flex items-center justify-between p-2 hover:bg-custom-hover rounded-md transition duration-200 border border-gray-300"
           >
             <div className="flex items-center gap-3">
               <Link to={`/profile/${user?._id}`}>
@@ -36,7 +36,7 @@ const SuggestedUsers = () => {
               </Link>
 
               <div>
-                <h1 className="font-semibold text-gray-800 text-sm">
+                <h1 className="font-semibold text-white text-sm">
                   <Link to={`/profile/${user?._id}`} className="hover:underline">
                     {user?.username}
                   </Link>
