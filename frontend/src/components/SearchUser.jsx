@@ -79,7 +79,7 @@ const UserSearchDialog = ({ open, setOpen }) => {
                   <AvatarFallback>{user.username.charAt(0).toUpperCase()}</AvatarFallback>
                 </Avatar>
                 <div>
-                  <h1 className="font-semibold text-sm">{user?.username}</h1>
+                  <h1 className="font-semibold text-sm text-white">{user?.username}</h1>
                   <span className="text-gray-600 text-sm line-clamp-2 overflow-hidden text-ellipsis"
                     style={{
                         display: '-webkit-box',

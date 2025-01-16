@@ -1,11 +1,12 @@
 import express from "express";
 import isAuthenticated from "../middlewares/isAuthenticated.js";
 import upload from "../middlewares/multer.js";
-import { addNewPost,getAllPost, getUserPost, likePost, dislikePost, addComment, getCommentsOfPost, deletePost, bookmarkPost , getSinglePost, getProductDataAmazon,getProductDataFlipkart, getProductDataMyntra} from "../controllers/post.controller.js";
+import { addNewPost,getAllPost,getAllPostProducts, getUserPost, likePost, dislikePost, addComment, getCommentsOfPost, deletePost, bookmarkPost , getSinglePost, getProductDataAmazon,getProductDataFlipkart, getProductDataMyntra} from "../controllers/post.controller.js";
 const router = express.Router();
 
 router.route("/addpost").post(isAuthenticated, upload.single('image'), addNewPost);
 router.route("/all").get(isAuthenticated,getAllPost);
+router.route("/allproducts").get(isAuthenticated,getAllPostProducts);
 router.route("/posts/:idOrSlug").get(getSinglePost);
 router.route("/userpost/all").get(isAuthenticated, getUserPost);
 router.route("/:id/like").get(isAuthenticated, likePost);

@@ -3,6 +3,7 @@ const postSlice = createSlice({
     name:'post',
     initialState:{
         posts:[],
+        productPosts:[],
         selectedPost:null,
         hasMore: true,
     },
@@ -10,6 +11,9 @@ const postSlice = createSlice({
         //actions
         setPosts:(state,action) => {
             state.posts = action.payload;
+        },
+        setProductPosts:(state,action) => {
+            state.productPosts = action.payload;
         },
         appendPosts: (state, action) => {
             const newPosts = action.payload.posts.filter(
@@ -28,7 +32,7 @@ const postSlice = createSlice({
           },
     }
 });
-export const {setPosts, appendPosts,setSelectedPost,clearPosts} = postSlice.actions;
+export const {setPosts, appendPosts,setSelectedPost,clearPosts,setProductPosts} = postSlice.actions;
 export default postSlice.reducer;
 
 

@@ -81,18 +81,23 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Product from "./Product";
 import { useSelector } from "react-redux";
+import { use } from "react";
 
 const Products = () => {
-  const { posts } = useSelector((store) => store.post);
+  const { productPosts  } = useSelector((store) => store.post);
   const [allProducts, setAllProducts] = useState([]);
   const [visibleProducts, setVisibleProducts] = useState([]);
   const [limit] = useState(10); // Number of products per "page"
   const [page, setPage] = useState(1); // Current page
   const [loading, setLoading] = useState(false);
 
+  
+
   // Combine products with captions from posts
   const combineProductsWithCaptions = () => {
-    return posts.flatMap((post) =>
+    
+    return productPosts.flatMap((post) =>
+      
       post.products.map((product) => ({
         product,
         caption: post.caption,
@@ -134,10 +139,11 @@ const Products = () => {
 
   // Initialize products on component mount
   useEffect(() => {
+
     const initialProducts = shuffleArray(combineProductsWithCaptions());
     setAllProducts(initialProducts);
     setVisibleProducts(initialProducts.slice(0, limit));
-  }, [posts, limit]);
+  }, [productPosts, limit]);
 
   // Attach scroll event listener
   useEffect(() => {
@@ -146,6 +152,8 @@ const Products = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [handleScroll]);
+
+  
 
   return (
     <div>
