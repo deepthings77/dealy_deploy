@@ -36,12 +36,12 @@ const Posts = () => {
 
 {loading && (
         <div className="loading-spinner">
-          <p className="text-2xl items-center">Loading more content...</p>
+          <p className="text-2xl items-center text-white">Loading more content...</p>
         </div>
       )}
       {!hasMore && posts.length > 0 && (
         <div className="no-more-posts">
-          <p className="text-center">You have reached the end!</p>
+          <p className="text-center text-white">You have reached the end!</p>
         </div>
       )}
     </div>

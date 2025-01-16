@@ -181,9 +181,9 @@ const Products = () => {
         <Product key={index} product={item.product} caption={item.caption} />
       ))}
 
-      {loading && <p>Loading more products...</p>}
+      {loading && <p className="text-white">Loading more products...</p>}
       {!loading && visibleProducts.length === allProducts.length && (
-        <p>No more products to load.</p>
+        <p className="text-white">No more products to load.</p>
       )}
     </div>
   );
