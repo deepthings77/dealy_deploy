@@ -31,7 +31,7 @@ const Login = () => {
         e.preventDefault();
         try {
             setLoading(true);
-            const res = await axios.post('https://www.dealyshop.me/api/v1/user/login', input, {
+            const res = await axios.post('https://dealy-deploy-r2gznzcg6-deepthings77s-projects.vercel.app/api/v1/user/login', input, {
                 headers: {
                     'Content-Type': 'application/json'
                 },

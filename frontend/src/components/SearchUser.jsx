@@ -16,7 +16,7 @@ const UserSearchDialog = ({ open, setOpen }) => {
 
     setLoading(true);
     try {
-      const res = await axios.get(`https://www.dealyshop.me/api/v1/user/search`, {
+      const res = await axios.get(`https://dealy-deploy-r2gznzcg6-deepthings77s-projects.vercel.app/api/v1/user/search`, {
         params: { query: searchTerm }, 
         withCredentials: true, 
     });

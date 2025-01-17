@@ -40,7 +40,7 @@ const SinglePost = () => {
     // Fetch single post data
     const fetchPost = async () => {
       try {
-        const res = await axios.get(`https://www.dealyshop.me/api/v1/post/posts/${postId}`, { withCredentials: true }); // Backend endpoint
+        const res = await axios.get(`https://dealy-deploy-r2gznzcg6-deepthings77s-projects.vercel.app/api/v1/post/posts/${postId}`, { withCredentials: true }); // Backend endpoint
         
 
         if (res.data.success) {

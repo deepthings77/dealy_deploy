@@ -1,0 +1,145 @@
+[33mcommit 7c35e6062defa977c585709354b3d108d3260b33[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Merge: 366b4c9 efe0966
+Author: Deepak Kumawat <117026690+deepthings77@users.noreply.github.com>
+Date:   Fri Jan 17 15:04:50 2025 +0530
+
+    Merge branch 'main' of https://github.com/deepthings77/dealy_deploy
+    try commit
+
+[33mcommit 366b4c9d7b7ae314e7f99f631dd9d8b50c6849a5[m
+Author: Deepak Kumawat <117026690+deepthings77@users.noreply.github.com>
+Date:   Fri Jan 17 15:04:26 2025 +0530
+
+    vercel deploy-3.04
+
+[33mcommit efe0966b2a15a9931ce01776e6780b0c8b1bd19c[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Deepak Kumawat <117026690+deepthings77@users.noreply.github.com>
+Date:   Fri Jan 17 14:38:42 2025 +0530
+
+    Delete frontend/public/logofordealy.png
+
+[33mcommit a31ada9dc3ceef942f7464b06e8b6f6f7eddad0f[m
+Author: Deepak Kumawat <117026690+deepthings77@users.noreply.github.com>
+Date:   Fri Jan 17 14:38:09 2025 +0530
+
+    Delete video1
+
+[33mcommit 94dd3c42b63a57436ff41e4225ad1e332a1b85b4[m
+Author: Deepak Kumawat <117026690+deepthings77@users.noreply.github.com>
+Date:   Fri Jan 17 14:37:52 2025 +0530
+
+    Delete videos
+
+[33mcommit 06d7bf56f19243365a6902847fd2d51fbc9dbdb5[m
+Author: Deepak Kumawat <117026690+deepthings77@users.noreply.github.com>
+Date:   Fri Jan 17 14:33:47 2025 +0530
+
+    logo change
+
+[33mcommit 2393636634dfdd4ec04c09bf8df35159dd167df5[m
+Author: Deepak Kumawat <117026690+deepthings77@users.noreply.github.com>
+Date:   Fri Jan 17 13:34:05 2025 +0530
+
+    render deploy
+
+[33mcommit bc26684c36fe2ea735aa50d3c982a37ef376655b[m
+Author: Deepak Kumawat <117026690+deepthings77@users.noreply.github.com>
+Date:   Fri Jan 17 13:14:24 2025 +0530
+
+    vercel deploy try
+
+[33mcommit 8eca9c960c473b5d68c6e4d9531e9a13c83c29ae[m
+Author: Deepak Kumawat <117026690+deepthings77@users.noreply.github.com>
+Date:   Thu Jan 16 22:11:32 2025 +0530
+
+    bug fix
+
+[33mcommit beff167c5d0dc4a21f8f2886f811779e1150771d[m
+Author: Deepak Kumawat <117026690+deepthings77@users.noreply.github.com>
+Date:   Thu Jan 16 21:24:01 2025 +0530
+
+    bug fix
+
+[33mcommit 3b8bb7474d21cf59fe3715d7d62ae2fe8e11042c[m
+Author: Deepak Kumawat <117026690+deepthings77@users.noreply.github.com>
+Date:   Thu Jan 16 17:04:22 2025 +0530
+
+    products updated
+
+[33mcommit 39b7c2ce89052747f6e0f79f429a1ca4a8434d14[m
+Author: Deepak Kumawat <117026690+deepthings77@users.noreply.github.com>
+Date:   Thu Jan 16 15:30:58 2025 +0530
+
+    ui update
+
+[33mcommit 2eca8ef271e8e731328b8eb76c0d64cc56116709[m
+Author: Deepak Kumawat <117026690+deepthings77@users.noreply.github.com>
+Date:   Thu Jan 16 14:59:28 2025 +0530
+
+    ui changes
+
+[33mcommit 3350dd28ab9153bb2f73ac23c71dc3131970ad2e[m
+Author: Deepak Kumawat <117026690+deepthings77@users.noreply.github.com>
+Date:   Thu Jan 16 00:32:16 2025 +0530
+
+    Profile section bugs
+
+[33mcommit 0f12812f993f6e9fc56939a5c4eeaf8a795e8288[m
+Author: Deepak Kumawat <117026690+deepthings77@users.noreply.github.com>
+Date:   Wed Jan 15 23:59:51 2025 +0530
+
+    modified suggested users
+
+[33mcommit 7edc7d025eb4bee2766a657dce6d935a8c19b114[m
+Author: Deepak Kumawat <117026690+deepthings77@users.noreply.github.com>
+Date:   Wed Jan 15 21:40:49 2025 +0530
+
+    infinite scroll
+
+[33mcommit 9edac1939a9b3018308022644320baa23d2b5b10[m
+Author: Deepak Kumawat <117026690+deepthings77@users.noreply.github.com>
+Date:   Tue Jan 14 18:16:18 2025 +0530
+
+    more changes
+
+[33mcommit 108505602711298fea136a1ac7a87acba06dcc5f[m
+Author: Deepak Kumawat <117026690+deepthings77@users.noreply.github.com>
+Date:   Mon Jan 13 20:31:44 2025 +0530
+
+    domain add
+
+[33mcommit de846df377683c37ba599e5d1d930c9e562b04a8[m
+Author: Deepak Kumawat <117026690+deepthings77@users.noreply.github.com>
+Date:   Mon Jan 13 18:08:56 2025 +0530
+
+    backend url change
+
+[33mcommit e76dab1a1228b0ec133615f7ffb0deea49157ef4[m
+Author: Deepak Kumawat <117026690+deepthings77@users.noreply.github.com>
+Date:   Mon Jan 13 17:46:05 2025 +0530
+
+    .
+
+[33mcommit dfc446a6e1dbfe65c973a0264c95c2eeebd41147[m
+Author: Deepak Kumawat <117026690+deepthings77@users.noreply.github.com>
+Date:   Mon Jan 13 17:41:09 2025 +0530
+
+    changes in import
+
+[33mcommit 20b58027478cad7fb1a1d248315ffd7ab0ac634b[m
+Author: Deepak Kumawat <117026690+deepthings77@users.noreply.github.com>
+Date:   Mon Jan 13 17:36:24 2025 +0530
+
+    some more
+
+[33mcommit 2951abf6963f0e1822dbd62ba149f1d7452fcb7e[m
+Author: Deepak Kumawat <117026690+deepthings77@users.noreply.github.com>
+Date:   Mon Jan 13 17:19:53 2025 +0530
+
+    ,
+
+[33mcommit f1ddbf13015d0889c0efb5382a9b6c05bff691db[m
+Author: Deepak Kumawat <117026690+deepthings77@users.noreply.github.com>
+Date:   Mon Jan 13 17:01:30 2025 +0530
+
+    deploy

@@ -21,7 +21,7 @@ const useGetAllPost = () => {
         const fetchAllPost = async (currentPage, direction = "older") => {
             try {
                 setLoading(true); 
-                const res = await axios.get(`https://www.dealyshop.me/api/v1/post/all?page=${currentPage}&limit=15`, { withCredentials: true });
+                const res = await axios.get(`https://dealy-deploy-r2gznzcg6-deepthings77s-projects.vercel.app/api/v1/post/all?page=${currentPage}&limit=15`, { withCredentials: true });
                 
                 if (res.data.success) { 
                     
@@ -74,7 +74,7 @@ export default useGetAllPost;
 //         const fetchAllPost = async () => {
 //             try {
                 
-//                 const res = await axios.get('https://www.dealyshop.me/api/v1/post/all', { withCredentials: true });
+//                 const res = await axios.get('https://dealy-deploy-r2gznzcg6-deepthings77s-projects.vercel.app/api/v1/post/all', { withCredentials: true });
                 
 //                 if (res.data.success) { 
                     
