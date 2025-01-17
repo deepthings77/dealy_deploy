@@ -55,7 +55,7 @@ const CreatePost = ({ open, setOpen }) => {
         try{
 
             setLoading(true);
-            const res = await axios.post('https://www.dealyshop.me/api/v1/post/addpost', formData, {
+            const res = await axios.post('https://dealy-deploy-vercel.vercel.app/api/v1/post/addpost', formData, {
                 headers: {
                   'Content-Type': 'multipart/form-data'
                 },

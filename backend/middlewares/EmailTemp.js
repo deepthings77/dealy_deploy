@@ -161,7 +161,7 @@ export const Welcome_Email_Template = `
                   
                   <li>Reach out to our support team if you have any questions or need assistance.</li>
               </ul>
-              <a href="https://www.dealyshop.me/des" class="button">Get Started</a>
+              <a href="https://dealy-deploy-vercel.vercel.app/des" class="button">Get Started</a>
               <p>If you need any help, don’t hesitate to contact us. We’re here to support you every step of the way.</p>
           </div>
           <div class="footer">
