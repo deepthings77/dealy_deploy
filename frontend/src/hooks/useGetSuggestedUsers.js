@@ -12,7 +12,7 @@ const useGetSuggestedUsers = () => {
         const fetchSuggestedUsers = async () => {
             try {
 
-                const res = await axios.get('https://www.dealyshop.me/api/v1/user/suggested', { withCredentials: true });
+                const res = await axios.get('https://dealy-deploy.vercel.app/api/v1/user/suggested', { withCredentials: true });
 
                 if (res.data.success) { 
                     dispatch(setSuggestedUsers(res.data.users));

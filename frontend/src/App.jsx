@@ -86,7 +86,7 @@ export default function App() {
 
   useEffect(() => {
     if (user) {
-      const socketio = io('https://www.dealyshop.me', {
+      const socketio = io('https://dealy-deploy.vercel.app', {
         query: {
           userId: user?._id
         },
