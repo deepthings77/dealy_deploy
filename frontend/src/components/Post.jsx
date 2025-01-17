@@ -71,7 +71,7 @@ const Post = ({ post }) => {
       try {
 
         const action = liked ? 'dislike' : 'like';
-        const res = await axios.get(`https://dealy-deploy.vercel.app/api/v1/post/${post?._id}/${action}`, { withCredentials: true });
+        const res = await axios.get(`https://www.dealyshop.me/api/v1/post/${post?._id}/${action}`, { withCredentials: true });
 
        
         if (res.data.success) {
@@ -101,7 +101,7 @@ const Post = ({ post }) => {
     const commentHandler = async () => {
         try {
 
-            const res = await axios.post(`https://dealy-deploy.vercel.app/api/v1/post/${post?._id}/comment`, { text }, {
+            const res = await axios.post(`https://www.dealyshop.me/api/v1/post/${post?._id}/comment`, { text }, {
               headers: {
                   'Content-Type': 'application/json'
               },
@@ -133,7 +133,7 @@ const Post = ({ post }) => {
     const deletePostHandler = async () => {
         try {
 
-          const res = await axios.delete(`https://dealy-deploy.vercel.app/api/v1/post/delete/${post?._id}`, { withCredentials: true })
+          const res = await axios.delete(`https://www.dealyshop.me/api/v1/post/delete/${post?._id}`, { withCredentials: true })
             if (res.data.success) {
                 const updatedPostData = posts.filter((postItem) => postItem?._id !== post?._id);
                 dispatch(setPosts(updatedPostData));
@@ -152,7 +152,7 @@ const Post = ({ post }) => {
       try {
         
         const res = await axios.get(
-          `https://dealy-deploy.vercel.app/api/v1/post/${post?._id}/bookmark`,
+          `https://www.dealyshop.me/api/v1/post/${post?._id}/bookmark`,
           { withCredentials: true }
         );
     

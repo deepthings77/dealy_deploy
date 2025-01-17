@@ -18,7 +18,7 @@ const useGetAllPostProducts = () => {
             try {
                 
 
-                const res = await axios.get(`https://dealy-deploy.vercel.app/api/v1/post/allproducts`, { withCredentials: true });
+                const res = await axios.get(`https://www.dealyshop.me/api/v1/post/allproducts`, { withCredentials: true });
     
     
                 if (res.data.success) { 
