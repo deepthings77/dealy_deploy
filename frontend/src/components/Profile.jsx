@@ -52,7 +52,7 @@ const Profile = () => {
       
     
       const response = await axios.post(
-        `https://dealy-deploy-vercel.vercel.app/api/v1/user/followorunfollow/${userId}`,
+        `https://www.dealyshop.me/api/v1/user/followorunfollow/${userId}`,
         {},
         {
           withCredentials: true,

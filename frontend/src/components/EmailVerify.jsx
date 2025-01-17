@@ -17,7 +17,7 @@ const navigate = useNavigate();
         setLoading(true);
 
         try {
-            const res = await axios.post('https://dealy-deploy-vercel.vercel.app/api/v1/user/verify-email', { code });
+            const res = await axios.post('https://www.dealyshop.me/api/v1/user/verify-email', { code });
             if (res.data.success) {
                 toast.success(res.data.message);
                 navigate("/login");
