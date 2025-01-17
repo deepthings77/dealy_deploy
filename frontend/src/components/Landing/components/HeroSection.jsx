@@ -32,18 +32,18 @@ const HeroSection = () => {
           autoPlay
           loop
           muted
-          className="rounded-lg w-1/2 border border-orange-700 shadow-sm shadow-orange-400 mx-2 my-4 object-contain"
+          className="rounded-lg w-1/2 border border-orange-700 shadow-sm shadow-orange-400 mx-2 my-4"
         >
-          <source src="https://res.cloudinary.com/dsxx9isde/video/upload/v1737104056/video1_aadx2d.mp4" type="video/mp4" />
+          <source src={video1} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <video
           autoPlay
           loop
           muted
-          className="rounded-lg w-1/2 border border-orange-700 shadow-sm shadow-orange-400 mx-2 my-4 object-contain"
+          className="rounded-lg w-1/2 border border-orange-700 shadow-sm shadow-orange-400 mx-2 my-4"
         >
-          <source src="https://res.cloudinary.com/dsxx9isde/video/upload/v1737104054/video2_mgcpc3.mp4"type="video/mp4" />
+          <source src={video2} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
