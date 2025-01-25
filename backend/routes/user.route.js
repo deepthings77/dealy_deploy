@@ -2,10 +2,12 @@ import express from 'express';
 import upload from '../middlewares/multer.js';
 import isAuthenticated from '../middlewares/isAuthenticated.js';
 
-import { register, login, logout, getProfile, editProfile, getSuggestedUsers, followOrUnfollow , searchUsers, verifyEmail} from '../controllers/user.controller.js';
+import { googleLogin ,register, login, logout, getProfile, editProfile, getSuggestedUsers, followOrUnfollow , searchUsers, verifyEmail} from '../controllers/user.controller.js';
 
 
 const router = express.Router();
+
+router.route("/google-login").post(googleLogin);
 
 router.route('/register').post(register);
 router.route('/login').post(login);

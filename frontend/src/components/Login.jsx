@@ -8,6 +8,7 @@ import { Loader2 } from 'lucide-react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setAuthUser } from '../Redux/authSlice';
 import exampleImage from '../assets/logo.png';
+import { auth, googleProvider, signInWithPopup } from '../firebase.js';
 
 
 
@@ -16,12 +17,35 @@ const Login = () => {
         email: "",
         password: ""
     });
+    const [username, setUsername] = useState("");
     const [loading, setLoading] = useState(false);
     const {user} = useSelector(store=>store.auth);
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const [passwordVisible, setPasswordVisible] = useState(false);
 
+    const handleGoogleLogin = async () => {
+      try {
+        
+
+          const result = await signInWithPopup(auth, googleProvider);
+          const idToken = await result.user.getIdToken();
+  
+          // Send the ID token to your backend
+          const response = await axios.post("https://www.dealyshop.me/api/v1/user/google-login", { idToken  }, { withCredentials: true });
+  
+          if(response.data.success){
+            dispatch(setAuthUser(response.data.user));
+            navigate("/");
+            toast.success(response.data.message);
+          }
+        
+      } catch (error) {
+          console.error("Error during Google login:", error);
+          toast.error(error.response.data.message);
+      }
+  };
+  
 
     const changeEventHandler = (e) => {
         setInput({ ...input, [e.target.name]: e.target.value });
@@ -61,11 +85,14 @@ const Login = () => {
     },[])
 
     return (
+        
         <div style={{
 
             background: "#131423"
            
          }} className="flex items-center justify-center w-full h-screen px-4 sm:px-6 lg:px-8">
+          
+         
           <form
             onSubmit={signupHandler}
             style={{
@@ -127,15 +154,32 @@ const Login = () => {
                 </Button>
               )}
             </div>
+            <div className="flex justify-center">
+        <button
+       
+          className="w-full px-4 py-2 bg-blue-600 text-white rounded-md font-medium"
+          onClick={handleGoogleLogin}
+          type="button"
+        >
+          Login with Google
+        </button>
+      </div>
             <p className="text-center text-sm">
               Don't have an account?{' '}
               <Link to="/signup" className="text-blue-600">
                 Signup
               </Link>
+              <div className='flex justify-center'>
+              
+              </div>
             </p>
           
           </form>
+          
+
+          
         </div>
+
       );
 }
 

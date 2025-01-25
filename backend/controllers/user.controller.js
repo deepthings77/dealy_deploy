@@ -6,7 +6,56 @@ import cloudinary from "../utils/cloudinary.js";
 import getDataUri from "../utils/datauri.js";
 import { toast } from 'sonner';
 import {sendEmailVerfication, sendWelcomeEmail} from '../middlewares/Email.js';
+import admin from '../utils/firebase.js';
 
+export const googleLogin = async (req, res) => {
+    try {
+        const { idToken  } = req.body;
+
+        if (!idToken ) {
+            return res.status(400).json({ success: false, message: "ID Token is required" });
+        }
+        // Verify Firebase ID token
+        const decodedToken = await admin.auth().verifyIdToken(idToken);
+        const { email, name, picture, uid } = decodedToken;
+
+        // Check if the user already exists in MongoDB
+        let user = await User.findOne({ email });
+
+        let updatedname = name.trim()+ Math.floor(1000 + Math.random() * 9000).toString();
+
+        const hashedPassword = await bcrypt.hash(email, 10);
+
+        if (!user) {
+            // If the user does not exist, create a new one
+            user = await User.create({
+                username: updatedname || email.split("@")[0],
+
+                email,
+                password: hashedPassword,
+                profilePicture: picture,
+                firebaseUID: uid,
+                isVerified: true, // Google accounts are considered verified
+            });
+        }
+
+        // Generate a JWT for the user
+        const token = await jwt.sign({ userId: user._id }, process.env.SECRET_KEY, { expiresIn: "7d" });
+
+        return res.status(201).cookie("token", token, {
+            httpOnly: true,
+            sameSite: "strict",
+            maxAge: 7 * 24 * 60 * 60 * 1000,
+        }).json({
+            success: true,
+            message: `Welcome back ${user.username}`,
+            user
+        });
+    } catch (error) {
+        console.error("Error in googleLogin:", error);
+        res.status(500).json({ success: false, message: "Internal server error" });
+    }
+};
 
 export const register = async (req, res) => {
 

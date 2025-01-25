@@ -14,6 +14,7 @@ const userSchema = new mongoose.Schema({
     isVerified:{type:Boolean,default:false},
     verificationCode:{type:String},
     verificationCodeExpires:{type:Date},
+    firebaseUID: { type: String }, // added this line
 },{timestamps:true});
 
 

@@ -6,9 +6,9 @@ import { toast } from 'sonner';
 import { Link, useNavigate } from 'react-router-dom';
 import { Loader2 } from 'lucide-react';
 import { useSelector } from 'react-redux';
-
-
-
+import { useDispatch } from 'react-redux';
+import { auth, googleProvider, signInWithPopup } from '../firebase.js';
+import { setAuthUser } from '../Redux/authSlice';
 
 import exampleImage from '../assets/logo.png';
 
@@ -25,7 +25,7 @@ const Signup = () => {
     const {user} = useSelector(store=>store.auth);
     const navigate = useNavigate();
     const [passwordVisible, setPasswordVisible] = useState(false);
-
+    const dispatch = useDispatch();
     const changeEventHandler = (e) => {
         setInput({ ...input, [e.target.name]: e.target.value });
     }
@@ -59,6 +59,26 @@ const Signup = () => {
       }
   }
 
+  const handleGoogleLogin = async () => {
+    try {
+        const result = await signInWithPopup(auth, googleProvider);
+        const idToken = await result.user.getIdToken();
+
+        // Send the ID token to your backend
+        const response = await axios.post("https://www.dealyshop.me/api/v1/user/google-login", { idToken }, { withCredentials: true });
+
+        if(response.data.success){
+          dispatch(setAuthUser(response.data.user));
+          navigate("/");
+          toast.success(response.data.message);
+        }
+        
+    } catch (error) {
+        console.error("Error during Google login:", error);
+        toast.error(error.response.data.message);
+    }
+};
+
   useEffect(()=>{
       if(user){
           navigate("/");
@@ -85,7 +105,7 @@ const Signup = () => {
                 <img
                                 src={exampleImage}
                                 alt="Dealy"
-                                className="w-32 h-32 object-contain mx-auto transform transition duration-300 hover:scale-110"
+                                className="w-16 h-16 object-contain mx-auto transform transition duration-300 hover:scale-110"
                               />
                               
                 <p className="text-sm text-white">
@@ -143,6 +163,16 @@ const Signup = () => {
                     </Button>
                 )}
             </div>
+            <div className="flex justify-center">
+        <button
+       
+          className="w-full px-4 py-2 bg-blue-600 text-white rounded-md font-medium"
+          onClick={handleGoogleLogin}
+          type="button"
+        >
+          Signup with Google
+        </button>
+        </div>
             <p className="text-center text-sm">
                 Already have an account?{" "}
                 <Link to="/login" className="text-blue-600">
