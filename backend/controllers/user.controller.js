@@ -266,7 +266,7 @@ export const editProfile  = async (req, res) => {
     try {
 
         const userId = req.id;
-        const { bio, gender } = req.body;
+        const { bio, gender,username } = req.body;
         const profilePicture = req.file;
 
         let cloudResponse;
@@ -289,6 +289,19 @@ export const editProfile  = async (req, res) => {
             });
         };
 
+        if (username && username !== user.username) {
+            const usernameExists = await User.findOne({ username });
+            if (usernameExists) {
+                return res.status(400).json({
+                    message: 'Username already exists. Please choose another.',
+                    success: false,
+                });
+            }
+            user.username = username;
+        }
+
+
+
         if (bio) user.bio = bio;
         if (gender) user.gender = gender;
         if (profilePicture) user.profilePicture = cloudResponse.secure_url;
@@ -307,7 +320,10 @@ export const editProfile  = async (req, res) => {
         
     } catch (error) {
         console.log("Error in editProfile ", error);
-        
+        return res.status(500).json({
+            message: 'An error occurred while updating the profile.',
+            success: false,
+        });
     }
 };
 

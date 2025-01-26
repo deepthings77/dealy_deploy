@@ -58,6 +58,10 @@ const EditProfile = () => {
             isUpdated = true;
 
         }
+        if (input.username && input.username !== user?.username) {
+          formData.append('username', input.username);
+          isUpdated = true;
+        }
         if (!isUpdated) {
           toast.error('No changes detected');
           return;
@@ -78,12 +82,14 @@ const EditProfile = () => {
                     ...user,
                     bio:res.data.user?.bio,
                     profilePicture:res.data.user?.profilePicture,
-                    gender:res.data.user?.gender
+                    gender:res.data.user?.gender,
+                    username: res.data.user?.username
                 };
                 dispatch(setAuthUser(updatedUserData));
                 navigate(`/profile/${user?._id}`);
                 toast.success(res.data.message);
             }
+            
       
     } catch (error) {
       console.log(error);
@@ -126,6 +132,17 @@ const EditProfile = () => {
             Change photo
           </Button>
         </div>
+        <div>
+  <h1 className="font-bold text-xl mb-2">Username</h1>
+  <input
+    type="text"
+    value={input.username}
+    onChange={(e) => setInput({ ...input, username: e.target.value })}
+    name="username"
+    className="w-full border rounded-md p-2"
+    placeholder={user?.username}
+  />
+</div>
 
         <div>
           <h1 className="font-bold text-xl mb-2">Bio</h1>
