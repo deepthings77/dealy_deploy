@@ -113,6 +113,16 @@ const Login = () => {
             <div>
       
     </div>
+    <div className="flex justify-center">
+        <button
+       
+          className="w-full px-4 py-2 bg-blue-600 text-white rounded-md font-medium"
+          onClick={handleGoogleLogin}
+          type="button"
+        >
+          Login/Signup with Google
+        </button>
+      </div>
             <div>
               <label className="block font-medium text-gray-700">Email</label>
               <Input
@@ -154,16 +164,7 @@ const Login = () => {
                 </Button>
               )}
             </div>
-            <div className="flex justify-center">
-        <button
-       
-          className="w-full px-4 py-2 bg-blue-600 text-white rounded-md font-medium"
-          onClick={handleGoogleLogin}
-          type="button"
-        >
-          Login with Google
-        </button>
-      </div>
+          
             <p className="text-center text-sm">
               Don't have an account?{' '}
               <Link to="/signup" className="text-blue-600">

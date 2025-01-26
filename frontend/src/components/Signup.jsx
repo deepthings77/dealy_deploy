@@ -112,6 +112,16 @@ const Signup = () => {
                     Signup to make your own online store
                 </p>
             </div>
+            <div className="flex justify-center">
+        <button
+       
+          className="w-full px-4 py-2 bg-blue-600 text-white rounded-md font-medium"
+          onClick={handleGoogleLogin}
+          type="button"
+        >
+          Login/Signup with Google
+        </button>
+        </div>
             <div>
                 <label className="block font-medium text-gray-700">Username</label>
                 <Input
@@ -163,16 +173,7 @@ const Signup = () => {
                     </Button>
                 )}
             </div>
-            <div className="flex justify-center">
-        <button
-       
-          className="w-full px-4 py-2 bg-blue-600 text-white rounded-md font-medium"
-          onClick={handleGoogleLogin}
-          type="button"
-        >
-          Signup with Google
-        </button>
-        </div>
+            
             <p className="text-center text-sm">
                 Already have an account?{" "}
                 <Link to="/login" className="text-blue-600">
