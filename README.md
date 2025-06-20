@@ -44,6 +44,134 @@ With Dealy, users can create, organize, and share wishlists while following infl
 
 ---
 
+## 🛠️ **File structure*
+dealy_deploy/
+├── .gitignore
+├── backend/
+│   ├── .gitignore
+│   ├── controllers/
+│   │   ├── post.controller.js
+│   │   └── user.controller.js
+│   ├── index.js
+│   ├── middlewares/
+│   │   ├── Email.js
+│   │   ├── emailconfig.js
+│   │   ├── EmailTemp.js
+│   │   ├── isAuthenticated.js
+│   │   └── multer.js
+│   ├── models/
+│   │   ├── comment.model.js
+│   │   ├── post.model.js
+│   │   ├── product.model.js
+│   │   └── user.model.js
+│   ├── routes/
+│   │   ├── post.route.js
+│   │   └── user.route.js
+│   ├── socket/
+│   │   └── socket.js
+│   └── utils/
+│       ├── cloudinary.js
+│       ├── datauri.js
+│       ├── db.js
+│       ├── firebase.js
+│       └── serviceaccountkey.json
+├── frontend/
+│   ├── .gitignore
+│   ├── components.json
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── public/
+│   │   └── logofordealy.png
+│   ├── README.md
+│   ├── src/
+│   │   ├── App.jsx
+│   │   ├── assets/
+│   │   │   ├── logo.png
+│   │   │   └── logofordealy.png
+│   │   ├── components/
+│   │   │   ├── Comment.jsx
+│   │   │   ├── CommentDialog.jsx
+│   │   │   ├── CreatePost.jsx
+│   │   │   ├── Description.jsx
+│   │   │   ├── EditProfile.jsx
+│   │   │   ├── EmailVerify.jsx
+│   │   │   ├── Explore.jsx
+│   │   │   ├── ExploreSection.jsx
+│   │   │   ├── Feed.jsx
+│   │   │   ├── FeedForExplore.jsx
+│   │   │   ├── Home.jsx
+│   │   │   ├── Landing/
+│   │   │   │   ├── assets/
+│   │   │   │   │   ├── code.jpg
+│   │   │   │   │   ├── logo.png
+│   │   │   │   │   ├── logofordealy.png
+│   │   │   │   │   ├── video1.mp4
+│   │   │   │   │   └── video2.mp4
+│   │   │   │   ├── components/
+│   │   │   │   │   ├── FeatureSection.jsx
+│   │   │   │   │   ├── Footer.jsx
+│   │   │   │   │   ├── HeroSection.jsx
+│   │   │   │   │   ├── Navbar.jsx
+│   │   │   │   │   ├── Pricing.jsx
+│   │   │   │   │   ├── Testimonials.jsx
+│   │   │   │   │   └── Workflow.jsx
+│   │   │   │   └── constants/
+│   │   │   │       └── index.jsx
+│   │   │   ├── LeftSideBar.jsx
+│   │   │   ├── Login.jsx
+│   │   │   ├── MainLayout.jsx
+│   │   │   ├── NotFound.jsx
+│   │   │   ├── Post.jsx
+│   │   │   ├── Posts.jsx
+│   │   │   ├── Product.jsx
+│   │   │   ├── Products.jsx
+│   │   │   ├── Profile.jsx
+│   │   │   ├── ProtectedRoutes.jsx
+│   │   │   ├── RightSidebar.jsx
+│   │   │   ├── SearchUser.jsx
+│   │   │   ├── SharePopUp.jsx
+│   │   │   ├── Signup.jsx
+│   │   │   ├── SinglePost.jsx
+│   │   │   ├── SuggestedUsers.jsx
+│   │   │   ├── TinderCard.jsx
+│   │   │   └── ui/
+│   │   │       ├── avatar.jsx
+│   │   │       ├── badge.jsx
+│   │   │       ├── button.jsx
+│   │   │       ├── dialog.jsx
+│   │   │       ├── input.jsx
+│   │   │       ├── label.jsx
+│   │   │       ├── popover.jsx
+│   │   │       ├── select.jsx
+│   │   │       ├── sonner.jsx
+│   │   │       └── textarea.jsx
+│   │   ├── firebase.js
+│   │   ├── hooks/
+│   │   │   ├── useGetAllPost.js
+│   │   │   ├── useGetAllPostProducts.js
+│   │   │   ├── useGetSuggestedUsers.js
+│   │   │   └── useGetUserProfile.js
+│   │   ├── index.css
+│   │   ├── lib/
+│   │   │   └── utils.js
+│   │   ├── main.jsx
+│   │   └── Redux/
+│   │       ├── authSlice.js
+│   │       ├── chatSlice.js
+│   │       ├── postSlice.js
+│   │       ├── rtnSlice.js
+│   │       ├── socketSlice.js
+│   │       └── store.js
+│   ├── tailwind.config.js
+│   └── vite.config.js
+├── package-lock.json
+├── package.json
+└── README.md
+
+
 ## 🛠️ **Tech Stack**  
 
 - **Frontend**: React.js, Redux, Vite  
